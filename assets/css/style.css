@@ -1,0 +1,163 @@
+/* container nav start! */
+#container {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    top: 0;
+    left: 0;
+}
+#container .container_a {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  font-size: 20px;
+  text-decoration: none;
+}
+#container .container_a a {   
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+#container .container-box {
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#container .container-box ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-size: 1rem;
+  color: gray;
+  line-height: 1.5;
+  font-weight: 400;
+}
+#container .container-box button {
+  margin-right: 9rem;
+  padding: 7px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#container .container-box button i {
+  margin-right: 0.3rem;
+}
+#container .container-box button span {
+  background-color: black;
+  padding: 0.12rem 0.4rem;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  margin-left: 0.29rem;
+  font-weight: 700;
+}
+
+/* container nav end! */
+/* shop section start! */
+
+#shop {
+  width: 100%;
+  background-color: #212529;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#shop .shop_box {
+  text-align: center;
+  line-height: 1.2;
+}
+#shop .shop_box h1{
+font-size: 56px;
+color: white;
+}
+#shop .shop_box p{
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.5);
+      padding-top: 1rem;
+}
+/* shop section end! */
+/* section special start! */
+#special {
+      width: 100%;
+}
+#special .special_box{
+      width: 68%;
+      margin: auto;
+      padding: 5rem 0 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+}
+#special .special_box .special_item{
+width: 21%;
+margin:1.4rem auto;
+border: 1px solid rgb(214, 208, 208);
+border-radius: 5px;
+}
+#special .special_box .special_item1{
+width: 100%;
+height: 20vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url('https://dummyimage.com/450x300/dee2e6/6c757d.jpg');
+position: relative;
+}
+#special .special_box .special_item1 span{
+      width: 40px;
+      height: 20px;
+      text-align: center;
+      color: white;
+      border-radius: 5px;
+      background-color: black;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+}
+
+#special .special_box .special_item2{
+      text-align: center;
+      padding: 1rem 0;
+}
+#special .special_box .special_item2 h3{
+      font-size: 20px;
+      line-height: 1.2;
+}
+#special .special_box .special_item2 .icon{
+      color: #FFC107;
+      width: 40%;
+      height: 40%;
+      font-size: 12px;
+      margin:0.3rem auto;
+}
+#special .special_box .special_item2 p{
+      /* margin: 1rem 0; */
+      font-size: 1rem;
+}
+#special .special_box .special_item2 button{
+      margin-top: 1.5rem;
+      padding: 6px 12px;
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+}
