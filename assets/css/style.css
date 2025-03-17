@@ -8,12 +8,14 @@
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: fixed;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    top: 0;
-    left: 0;
+  position: fixed;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
+
 #container .container_a {
   width: 30%;
   display: flex;
@@ -21,11 +23,13 @@
   font-size: 20px;
   text-decoration: none;
 }
-#container .container_a a {   
+
+#container .container_a a {
   text-decoration: none;
   color: black;
   cursor: pointer;
 }
+
 #container .container-box {
   width: 65%;
   height: 100%;
@@ -34,6 +38,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 #container .container-box ul {
   display: flex;
   list-style: none;
@@ -43,7 +48,8 @@
   line-height: 1.5;
   font-weight: 400;
 }
-#container .container-box button {
+
+#container .container-box .simple {
   margin-right: 9rem;
   padding: 7px 18px;
   font-size: 16px;
@@ -53,10 +59,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 300ms;
+  cursor: pointer;
 }
+
+#container .container-box .simple:hover {
+  background-color: black;
+  color: white;
+}
+
 #container .container-box button i {
   margin-right: 0.3rem;
 }
+
 #container .container-box button span {
   background-color: black;
   padding: 0.12rem 0.4rem;
@@ -67,97 +82,224 @@
   font-weight: 700;
 }
 
+#container .responsive_box .responsive {
+  border: 1px solid rgb(203, 201, 201);
+  color: rgb(147, 144, 144);
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 1.5rem;
+  display: none;
+}
+
 /* container nav end! */
 /* shop section start! */
 
 #shop {
   width: 100%;
   background-color: #212529;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 #shop .shop_box {
   text-align: center;
   line-height: 1.2;
-}
-#shop .shop_box h1{
-font-size: 56px;
-color: white;
-}
-#shop .shop_box p{
-      font-weight: 400;
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.5);
-      padding-top: 1rem;
-}
-/* shop section end! */
-/* section special start! */
-#special {
-      width: 100%;
-}
-#special .special_box{
-      width: 68%;
-      margin: auto;
-      padding: 5rem 0 3rem 0;
-      display: flex;
-      flex-wrap: wrap;
-}
-#special .special_box .special_item{
-width: 21%;
-margin:1.4rem auto;
-border: 1px solid rgb(214, 208, 208);
-border-radius: 5px;
-}
-#special .special_box .special_item1{
-width: 100%;
-height: 20vh;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-background-image: url('https://dummyimage.com/450x300/dee2e6/6c757d.jpg');
-position: relative;
-}
-#special .special_box .special_item1 span{
-      width: 40px;
-      height: 20px;
-      text-align: center;
-      color: white;
-      border-radius: 5px;
-      background-color: black;
-      position: absolute;
-      top: 5%;
-      right: 5%;
+  margin-top: 4rem;
 }
 
-#special .special_box .special_item2{
-      text-align: center;
-      padding: 1rem 0;
+#shop .shop_box h1 {
+  font-size: 53.7px;
+  color: white;
+  font-weight: bolder;
 }
-#special .special_box .special_item2 h3{
-      font-size: 20px;
-      line-height: 1.2;
+
+#shop .shop_box p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 0.4rem;
 }
-#special .special_box .special_item2 .icon{
-      color: #FFC107;
-      width: 40%;
-      height: 40%;
-      font-size: 12px;
-      margin:0.3rem auto;
+
+/* shop section end! */
+
+
+/* section special start! */
+#special {
+  width: 100%;
 }
-#special .special_box .special_item2 p{
-      /* margin: 1rem 0; */
-      font-size: 1rem;
+
+#special .special_box {
+  width: 80%;
+  margin: auto;
+  padding: 5rem 0 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
 }
-#special .special_box .special_item2 button{
-      margin-top: 1.5rem;
-      padding: 6px 12px;
-      background-color: white;
-      border: 1px solid gray;
-      border-radius: 5px;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
+
+#special .special_box .special_item {
+  width: 22%;
+  margin: 1.4rem auto;
+  border: 1px solid rgb(214, 208, 208);
+  border-radius: 5px;
+}
+
+#special .special_box .special_item1 {
+  width: 100%;
+  height: 20vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://dummyimage.com/450x300/dee2e6/6c757d.jpg');
+  position: relative;
+}
+
+#special .special_box .special_item1 span {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  background-color: black;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+#special .special_box .special_item2 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#special .special_box .special_item2 h3 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+#special .special_box .special_item2 .icon {
+  color: #FFC107;
+  height: 40%;
+  font-size: 12px;
+  margin: 0.3rem auto;
+}
+
+#special .special_box .special_item2 p {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+#special .special_box .special_item2 p .map {
+  text-decoration: line-through #6c757d;
+  color: #6c757d;
+}
+
+#special .special_box .special_item2 button {
+  padding: 6px 12px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: 400ms;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+#special .special_box .special_item2 button:hover {
+  background-color: #000;
+  color: white;
+}
+
+/* section special end! */
+
+/* footer start! */
+#footer {
+  max-width: 100%;
+  background-color: #212529;
+  padding: 2.4rem 0;
+}
+
+#footer .footer_box {
+  width: 80%;
+  margin: auto;
+}
+
+#footer .footer_box p {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* footer end! */
+
+@media only screen and (max-width:600px) {
+  #container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #container .container-box {
+    display: none;
+  }
+
+  #container .responsive_box .responsive {
+    display: block;
+    margin-right: 2rem;
+  }
+
+  #shop .shop_box h1 {
+    font-size: 33.7px;
+  }
+
+  #special .special_box .special_item {
+    width: 49%;
+    margin: 1.4rem auto;
+    font-size: 10px;
+  }
+  #special .special_box .special_item2 button:hover {
+    background-color: #000;
+    color: white;
+  }
+
+  #special .special_box .special_item1 {
+    width: 100%;
+    height: 10vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://dummyimage.com/450x300/dee2e6/6c757d.jpg');
+    position: relative;
+  }
+}
+
+@media (min-width:601px) and (max-width:992px) {
+  #container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #container .container-box {
+    display: none;
+  }
+
+  #container .responsive_box .responsive {
+    display: block;
+    margin-right: 2rem;
+  }
+
+  #shop .shop_box h1 {
+    font-size: 44.7px;
+  }
+
+  #special .special_box .special_item {
+    width: 32%;
+  }
 }
