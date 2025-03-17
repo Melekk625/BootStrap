@@ -280,6 +280,13 @@
     background-image: url('https://dummyimage.com/450x300/dee2e6/6c757d.jpg');
     position: relative;
   }
+  #special .special_box .special_item2 h3 {
+    font-size: 13px;
+  }
+  #special .special_box .special_item2 p {
+    margin: 1rem 0;
+    font-size: 12~px;
+  }
 }
 
 @media (min-width:601px) and (max-width:992px) {
